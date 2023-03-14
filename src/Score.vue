@@ -45,18 +45,22 @@ export default {
     
 
     <div class="container2">
+
+        
         <div class="card">
+
+            <!-- <div class="centerMsg">
+                <h3 id="user">Score</h3>
+
+            </div> -->
             <div class="scor">
                 <span id="Mark"> {{ Resultscore }} / 100</span>
                 
             </div>
-            <div class="centerMsg">
-                <h3 id="user">Congratilation Meryem</h3>
-
-            </div>
+        
             
            
-            <h5 id="msgSucc">You succeeded in quiz</h5>
+            <h5 id="msgSucc">You have finished your quiz</h5>
             <div class="btnResult">
                 <!-- <a href="" @click="this.$emit('send-message')">Check your answers</a> -->
                 <button @click="this.$emit('send-message')">Check your answers</button>

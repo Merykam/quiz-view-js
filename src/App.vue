@@ -213,7 +213,7 @@ export default {
             <div class="flex">
             
                 <div class="question-n">
-                    <p id="question-number">{{questionCounter+1 }} / {{questions.length}}</p>
+                    <p id="question-number">Question {{questionCounter+1 }} / {{questions.length}}</p>
                 </div>
                 <!-- <div class="progress-bar">
                     <p class="full-progress"></p>
