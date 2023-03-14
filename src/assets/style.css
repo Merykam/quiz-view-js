@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.addGreen{
+    color: green;
+    font-weight: bold;
+}
+.addred{
+    color: red;
+    font-weight: bold;
+
+}
+h1 {
+    
+    font-weight: bold;
+    color:brown;
+    
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+body{
+    background-color: rgb(238, 190, 190) !important;
+    /* display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; */
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 190, 190);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* max-width: 80rem;
+    margin: 0 auto; */
+  }
+.flex-center {
+   
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 4rem;
+    box-shadow: 0 0.4rem 1.4rem 0 brown;
+    padding: 60px;
+    width: 60vw;
+   
+  }
+.display-flex {
+    display: flex;
+    background-color: white;
+    border: 1.5px solid brown;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .display-flex .A {
+    font-weight: bold;
+    color: brown;
+    font-size: larger;
+  }
+  .display-flex p {
+    margin-left: 1rem;
+  }
+  .display-flex:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 brown;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+
+
+/* score */
+
+
+.container2 {
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 190, 190);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 4rem;
+  box-shadow: 0 0.4rem 1.4rem 0 brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .scor {
+  width: 9rem;
+  height: 9rem;
+  border: 2px solid green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .scor span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card .scorR {
+  border: 2px solid red;
+}
+.card .btnResult {
+  margin-top: 2rem;
+}
+.card .btnResult a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(231, 139, 139);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.card .centerMsg h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+.card .centerMsg .msgF {
+  color: red;
+}
+.card h5 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* result page */
+
+
+.container3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 190, 190);
+}
+.container3 .card2 {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  width: 50rem;
+  height: 33rem;
+  box-shadow: 0 0.4rem 1.4rem 0 brown;
+}
+.container3 .card2 h6 {
+  font-size: 1.5rem;
+  color: brown;
+}
+.container3 .card2 p {
+  font-size: large;
+}
+
+
+
+
+
