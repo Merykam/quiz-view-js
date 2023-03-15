@@ -5,8 +5,9 @@ import './assets/style.css';
 <script>
 import scoree from './Score.vue';
 import result from './Result.vue';
+import welcome from './welcome.vue';
 export default {
-  components: {scoree, result},
+  components: {scoree, result, welcome},
 
   data() {
         return{
@@ -17,10 +18,11 @@ export default {
             showScore:false,
             endQuestion:false,
             questionCounter:0,
-            showQuestions:true,
+            showQuestions:false,
             showAnswers:false,
             arraydata:[],
             falseQuestion:0,
+            showWelcome:true,
 
            
 
@@ -33,9 +35,9 @@ export default {
         choix2 :"Users retain full administrative access to their Amazon EC2 instances.", 
         choix3 :"Amazon EC2 instances can be launched on demand when needed.", 
         choix4 :"Users can permanently run enough instances to handle peak workloads.",
-        answer : 2,
-        Right :"Users retain full administrative access to their Amazon EC2 instances.",
-        Explication:"aaa"
+        answer : 3,
+        Right :"Amazon EC2 instances can be launched on demand when needed",
+        Explication:"The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
         
 
 
@@ -47,9 +49,9 @@ export default {
         choix2 :"AWS Database Migration Service (AWS DMS)", 
         choix3 :"Amazon EC2", 
         choix4 :"Amazon AppStream 2.0",
-        answer : 3,
-        Right :"Amazon EC2",
-        Explication:"bbb"
+        answer : 2,
+        Right :"AWS Database Migration Service (AWS DMS)",
+        Explication:"AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
 
 
     },
@@ -60,12 +62,51 @@ export default {
         choix2 :"AWS OpsWorks", 
         choix3 :"AWS SDK", 
         choix4 :"AWS Marketplace",
-        answer : 1,
-        Right :"AWS Config",
-        Explication:"ccc"
+        answer : 4,
+        Right :"AWS Marketplace",
+        Explication: "AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that makes it easy to find, test, buy, and deploy software that runs on AWS."
+    },
+   
+    {
+      id:3,
+        choix0 :"Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?", 
+        choix1 :"AWS Config",    
+        choix2 :"Amazon Route 53", 
+        choix3 : "AWS Direct Connect", 
+        choix4 :"Amazon Virtual Private Cloud (Amazon VPC)",
+        answer : 4,
+        Right : "Amazon Virtual Private Cloud (Amazon VPC)",
+        Explication:"Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define."
 
 
     },
+    {
+      id:3,
+        choix0 :"Which of the following is an AWS responsibility under the AWS shared responsibility model?", 
+        choix1 :"Configuring third-party applications",    
+        choix2 :"Maintaining physical hardware", 
+        choix3 : "Securing application access and data", 
+        choix4 :"Managing guest operating systems",
+        answer : 2,
+        Right : "Maintaining physical hardware",
+        Explication:"Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
+
+
+    },
+    {
+      id:3,
+        choix0 : "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?", 
+        choix1 : "AWS Regions",    
+        choix2 :"Edge locations", 
+        choix3 : "Availability Zones", 
+        choix4 :"Managing guest operating systems",
+        answer : 2,
+        Right :"Edge locations",
+        Explication:"To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide. "
+
+
+    },
+
 
 
 
@@ -82,6 +123,12 @@ export default {
 
 
   methods:{
+
+    showQ(){
+      this.showWelcome=false;
+      this.showQuestions=true;
+      
+    },
     checkanswers(){
       // e.preventDefault ();
       // this.showQuestions=false;
@@ -204,6 +251,12 @@ export default {
   </div>
   <div v-if="showScore">
     <scoree :Resultscore="score" @send-message="checkanswers"/>
+  </div>
+
+  <div v-if="showWelcome">
+    <!-- <scoree @send-message="checkanswers"/> -->
+    <welcome :welcomee="showQ"/>
+
   </div>
   
 <div class="container" v-if="showQuestions">
